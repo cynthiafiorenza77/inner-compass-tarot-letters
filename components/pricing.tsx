@@ -1,17 +1,17 @@
 'use client'
 
 const usPlans = [
-  { duration: 'Monthly', price: '$11', sub: 'per month, cancel anytime', href: '#' },
-  { duration: '3 Months', price: '$33', sub: 'one-time payment', href: '#' },
-  { duration: '6 Months', price: '$66', sub: 'one-time payment', href: '#' },
-  { duration: '1 Year', price: '$132', sub: 'one-time payment', href: '#' },
+  { duration: 'Monthly', price: '$11', billing: 'billed every month', href: '#' },
+  { duration: 'Quarterly', price: '$33', billing: 'billed every 3 months', href: '#' },
+  { duration: 'Semi-Annual', price: '$66', billing: 'billed every 6 months', href: '#' },
+  { duration: 'Annual', price: '$132', billing: 'billed every year', href: '#' },
 ]
 
 const intlPlans = [
-  { duration: 'Monthly', price: '$16', sub: 'per month, cancel anytime', href: '#' },
-  { duration: '3 Months', price: '$48', sub: 'one-time payment', href: '#' },
-  { duration: '6 Months', price: '$96', sub: 'one-time payment', href: '#' },
-  { duration: '1 Year', price: '$192', sub: 'one-time payment', href: '#' },
+  { duration: 'Monthly', price: '$16', billing: 'billed every month', href: '#' },
+  { duration: 'Quarterly', price: '$48', billing: 'billed every 3 months', href: '#' },
+  { duration: 'Semi-Annual', price: '$96', billing: 'billed every 6 months', href: '#' },
+  { duration: 'Annual', price: '$192', billing: 'billed every year', href: '#' },
 ]
 
 export function Pricing() {
@@ -41,11 +41,11 @@ export function Pricing() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border border-[#C4899A]/20">
             {usPlans.map((plan, i) => (
               <a key={i} href={plan.href}
-                className={`group p-7 flex flex-col justify-between min-h-[180px] hover:bg-[#4A2D40] transition-colors duration-300 ${i < 3 ? 'border-r border-[#C4899A]/20' : ''}`}>
+                className={`group p-7 flex flex-col justify-between min-h-[200px] hover:bg-[#4A2D40] transition-colors duration-300 ${i < 3 ? 'border-r border-[#C4899A]/20' : ''}`}>
                 <div>
-                  <p className="font-josefin text-xs tracking-widest uppercase text-[#C4899A] group-hover:text-[#C4899A] mb-3">{plan.duration}</p>
+                  <p className="font-josefin text-xs tracking-widest uppercase text-[#C4899A] mb-3">{plan.duration}</p>
                   <p className="font-cormorant text-4xl font-light text-[#4A2D40] group-hover:text-[#F9F3EC]">{plan.price}</p>
-                  <p className="font-josefin text-xs font-light text-[#6B4C3B] group-hover:text-[#F9F3EC]/60 mt-1">{plan.sub}</p>
+                  <p className="font-josefin text-xs font-light text-[#6B4C3B] group-hover:text-[#F9F3EC]/60 mt-2 leading-relaxed">{plan.billing}</p>
                 </div>
                 <span className="font-josefin text-xs tracking-widest uppercase text-[#C47856] group-hover:text-[#C4899A] mt-4">
                   Subscribe →
@@ -66,11 +66,11 @@ export function Pricing() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border border-[#C4899A]/20">
             {intlPlans.map((plan, i) => (
               <a key={i} href={plan.href}
-                className={`group p-7 flex flex-col justify-between min-h-[180px] hover:bg-[#4A2D40] transition-colors duration-300 ${i < 3 ? 'border-r border-[#C4899A]/20' : ''}`}>
+                className={`group p-7 flex flex-col justify-between min-h-[200px] hover:bg-[#4A2D40] transition-colors duration-300 ${i < 3 ? 'border-r border-[#C4899A]/20' : ''}`}>
                 <div>
                   <p className="font-josefin text-xs tracking-widest uppercase text-[#C4899A] mb-3">{plan.duration}</p>
                   <p className="font-cormorant text-4xl font-light text-[#4A2D40] group-hover:text-[#F9F3EC]">{plan.price}</p>
-                  <p className="font-josefin text-xs font-light text-[#6B4C3B] group-hover:text-[#F9F3EC]/60 mt-1">{plan.sub}</p>
+                  <p className="font-josefin text-xs font-light text-[#6B4C3B] group-hover:text-[#F9F3EC]/60 mt-2 leading-relaxed">{plan.billing}</p>
                 </div>
                 <span className="font-josefin text-xs tracking-widest uppercase text-[#C47856] group-hover:text-[#C4899A] mt-4">
                   Subscribe →
@@ -85,7 +85,7 @@ export function Pricing() {
           <div>
             <p className="font-cormorant text-2xl italic font-light text-[#4A2D40] mb-1">Gift to a friend 🎁</p>
             <p className="font-josefin text-sm font-light text-[#6B4C3B]">
-              Choose any plan above and enter your recipient's address at checkout. A tarot letter is one of the most thoughtful gifts you can send.
+              Choose any plan and enter your recipient's address at checkout. A tarot letter is one of the most thoughtful gifts you can send.
             </p>
           </div>
           <a href="#" className="flex-shrink-0 font-josefin text-xs tracking-widest uppercase px-8 py-4 bg-[#C47856] text-[#F9F3EC] hover:bg-[#C4899A] transition-colors duration-300 whitespace-nowrap">
