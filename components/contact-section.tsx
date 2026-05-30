@@ -11,7 +11,12 @@ export function ContactSection() {
         <div className="text-center mb-14">
           <p className="font-josefin text-xs tracking-[0.3em] uppercase text-[#C4899A] mb-4">Get in Touch</p>
           <h2 className="font-cormorant text-4xl md:text-5xl italic font-light text-[#4A2D40]">Say hello</h2>
-          <p className="font-josefin text-sm font-light text-[#6B4C3B] mt-4">Questions, collaborations, or just want to share what the cards have been telling you?</p>
+          <p className="font-josefin text-sm font-light text-[#6B4C3B] mt-4">
+            Questions about your subscription, gifting, or just curious about the cards? I would love to hear from you.
+          </p>
+          <a href="mailto:cynthia@innercompasstarotletters.org" className="font-josefin text-xs tracking-widest uppercase text-[#C47856] hover:text-[#C4899A] transition-colors mt-3 inline-block">
+            cynthia@innercompasstarotletters.org
+          </a>
         </div>
 
         {submitted ? (

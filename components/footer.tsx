@@ -30,7 +30,9 @@ export function Footer() {
 
           <div>
             <p className="font-josefin text-xs tracking-widest uppercase text-[#C4899A] mb-5">Connect</p>
-            <p className="font-josefin text-xs font-light text-[#F9F3EC]/45 mb-5">hello@innercompasstcards.com</p>
+            <a href="mailto:cynthia@innercompasstarotletters.org" className="font-josefin text-xs font-light text-[#F9F3EC]/45 hover:text-[#C4899A] transition-colors mb-5 block">
+              cynthia@innercompasstarotletters.org
+            </a>
             <div className="flex gap-5">
               <a href="#" className="font-josefin text-xs font-light tracking-widest uppercase text-[#F9F3EC]/35 hover:text-[#C4899A] transition-colors">TikTok</a>
               <a href="#" className="font-josefin text-xs font-light tracking-widest uppercase text-[#F9F3EC]/35 hover:text-[#C4899A] transition-colors">Instagram</a>

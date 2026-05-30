@@ -3,12 +3,30 @@ import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 
 const faqs = [
-  { q:"When does my first letter arrive?", a:"Letters ship the first week of each month. Subscribe before the 20th and you will be included that month. After the 20th, your first letter ships the following month." },
-  { q:"Do you offer readings for specific questions?", a:"Monthly letters use a general spread focused on what your soul needs right now, which tends to land very personally. Custom one-question readings will be available soon as an add-on." },
-  { q:"What if I do not connect with the reading?", a:"Tarot is intuitive — sit with it. Cards that feel least relevant often become the most accurate a few weeks later. Reach out and I will offer additional context." },
-  { q:"Is the digital plan a PDF?", a:"Yes — beautifully formatted PDFs emailed to your inbox, designed to also print well on standard paper if you want a physical copy." },
-  { q:"Do you ship internationally?", a:"Physical letters are US-only for now. International subscribers are welcome on the digital plan." },
-  { q:"How do I cancel?", a:"Cancel anytime through your account before your next billing date. No hoops, no guilt — this is meant to serve you." },
+  {
+    q: "When will my letter arrive?",
+    a: "I mail Inner Compass letters on the 1st of every month. US subscribers typically receive theirs within 3–10 days. International subscribers should allow 2–6 weeks for delivery. Subscribe before the 1st and your letter ships that same month — sign up after the 1st and your first letter goes out the following month."
+  },
+  {
+    q: "How do I cancel or update my address?",
+    a: "Just email me at cynthia@innercompasstarotletters.org and I will take care of everything. Whether you need to cancel, update your shipping address, or change your billing info — please reach out before the 1st of the month so I can make adjustments before that month's letters go out."
+  },
+  {
+    q: "What if my letter does not arrive?",
+    a: "US mail can occasionally take up to two weeks, and international deliveries can take up to six. If your letter has not arrived by the end of the month (US) or six weeks (international), email me at cynthia@innercompasstarotletters.org and I will make it right — either with a replacement or a refund. Before reaching out, please double-check that the address on your receipt is correct, as that is often the culprit!"
+  },
+  {
+    q: "Can I gift a subscription to someone?",
+    a: "Yes, and it makes such a meaningful gift! Simply choose any subscription length, enter your recipient's name and mailing address at checkout, and I will handle the rest. Each month they will receive a beautiful envelope full of tarot goodness — no wrapping required."
+  },
+  {
+    q: "What is tarot, and do I need to believe in it?",
+    a: "Tarot is a tool for reflection, not fortune-telling. You do not need to hold any particular belief — just bring an open mind. Many subscribers use their monthly letter as a journaling prompt, a moment of intentional pause, or simply a beautiful piece of mail to look forward to. The cards meet you wherever you are."
+  },
+  {
+    q: "Do you offer readings for specific questions?",
+    a: "The monthly letters use a general spread — what does this soul need right now — which tends to feel surprisingly personal. Custom one-question readings will be offered as an add-on in the future. Stay tuned!"
+  },
 ]
 
 export function FAQ() {
@@ -25,7 +43,7 @@ export function FAQ() {
             <div key={i}>
               <button className="w-full py-6 flex items-start justify-between gap-4 text-left group" onClick={() => setOpen(open===i ? null : i)}>
                 <span className="font-cormorant text-lg italic font-light text-[#F9F3EC] group-hover:text-[#C4899A] transition-colors">{faq.q}</span>
-                <ChevronDown size={16} className={`text-[#C4899A] flex-shrink-0 mt-1 transition-transform duration-300 ${open===i?'rotate-180':''}`}/>
+                <ChevronDown size={16} className={`text-[#C4899A] flex-shrink-0 mt-1 transition-transform duration-300 ${open===i ? 'rotate-180' : ''}`}/>
               </button>
               {open===i && (
                 <div className="pb-6">
