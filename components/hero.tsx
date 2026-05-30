@@ -52,7 +52,7 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
-        <p className="font-josefin text-xs tracking-[0.35em] uppercase text-[#C4899A] mb-6">Monthly · Handwritten · Mailed to You</p>
+        <p className="font-josefin text-xs tracking-[0.35em] uppercase text-[#C4899A] mb-6">Monthly · Thoughtfully Written · Mailed to You</p>
 
         <h1 className="font-cormorant text-6xl md:text-8xl font-light italic text-[#F9F3EC] leading-none mb-3">
           Inner Compass

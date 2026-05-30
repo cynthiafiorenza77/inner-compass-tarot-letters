@@ -1,7 +1,7 @@
 'use client'
 
 const items = [
-  { n:'01', title:'Reading Letter', desc:'A hand-written tarot reading drawn specifically for you that month — your cards, your story, your guidance.', accent:'#C4899A', bg:'#4A2D40' },
+  { n:'01', title:'Reading Letter', desc:'A personal tarot reading drawn specifically for you that month — your cards, your story, your guidance.', accent:'#C4899A', bg:'#4A2D40' },
   { n:'02', title:'Prompt Card', desc:'Three journaling questions pulled from your reading to help you go deeper on your own terms.', accent:'#C47856', bg:'#6B4C3B' },
   { n:'03', title:'Ritual Card', desc:'A simple moon-aligned ritual — candle work, breathwork, intention setting — matched to the energy of your reading.', accent:'#8BA888', bg:'#3B5438' },
   { n:'04', title:'Affirmation Strip', desc:'A bookmark-sized affirmation drawn from your cards. Tuck it in your journal, tape it to your mirror, carry it with you.', accent:'#F9F3EC', bg:'#C47856' },
