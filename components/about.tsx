@@ -36,17 +36,17 @@ export function About() {
           {/* Text */}
           <div>
             <h2 className="font-cormorant text-4xl md:text-5xl italic font-light text-[#4A2D40] leading-tight mb-6">
-              A letter written<br/>just for you.
+              A letter that finds<br/>you where you are.
             </h2>
             <div className="w-10 h-px bg-[#C47856] mb-7"/>
             <p className="font-josefin text-sm leading-loose text-[#6B4C3B] mb-5 font-light">
               After years in the classroom, I found myself at a crossroads — the kind tarot knows well. The cards did not just give me answers; they gave me the language to ask better questions.
             </p>
             <p className="font-josefin text-sm leading-loose text-[#6B4C3B] mb-5 font-light">
-              Inner Compass Tarot Letters was born from that turning point. Each month, I pull cards with intention, write you a personal reading, and mail it straight to your door — alongside a prompt card, a ritual guide, and a few small surprises.
+              Inner Compass Tarot Letters was born from that turning point. Each month, I pull cards with intention, channel a reading for the collective, and mail it straight to your door — alongside a prompt card, a ritual guide, and a few small surprises.
             </p>
             <p className="font-josefin text-sm leading-loose text-[#6B4C3B] font-light">
-              This is not a newsletter. It is a conversation between you and the cards, held inside an envelope.
+              Tarot has a way of speaking directly to whoever needs to hear it. This letter is not addressed to everyone — it is waiting for you.
             </p>
             <p className="font-cormorant text-2xl italic text-[#C4899A] mt-8">With love, Cynthia</p>
           </div>

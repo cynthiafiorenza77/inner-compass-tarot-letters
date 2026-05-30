@@ -1,10 +1,10 @@
 'use client'
 
 const items = [
-  { n:'01', title:'Reading Letter', desc:'A personal tarot reading drawn specifically for you that month — your cards, your story, your guidance.', accent:'#C4899A', bg:'#4A2D40' },
-  { n:'02', title:'Prompt Card', desc:'Three journaling questions pulled from your reading to help you go deeper on your own terms.', accent:'#C47856', bg:'#6B4C3B' },
-  { n:'03', title:'Ritual Card', desc:'A simple moon-aligned ritual — candle work, breathwork, intention setting — matched to the energy of your reading.', accent:'#8BA888', bg:'#3B5438' },
-  { n:'04', title:'Affirmation Strip', desc:'A bookmark-sized affirmation drawn from your cards. Tuck it in your journal, tape it to your mirror, carry it with you.', accent:'#F9F3EC', bg:'#C47856' },
+  { n:'01', title:'Reading Letter', desc:'A monthly tarot reading channeled for the collective — the kind of message that has a way of landing exactly where it needs to.', accent:'#C4899A', bg:'#4A2D40' },
+  { n:'02', title:'Prompt Card', desc:'Three journaling questions drawn from the month\'s reading to help you go deeper on your own terms.', accent:'#C47856', bg:'#6B4C3B' },
+  { n:'03', title:'Ritual Card', desc:'A simple moon-aligned ritual — candle work, breathwork, intention setting — matched to the energy of this month\'s reading.', accent:'#8BA888', bg:'#3B5438' },
+  { n:'04', title:'Affirmation Strip', desc:'A bookmark-sized affirmation drawn from the month\'s cards. Tuck it in your journal, tape it to your mirror, carry it with you.', accent:'#F9F3EC', bg:'#C47856' },
   { n:'05', title:'Monthly Surprise', desc:'A small seasonal gift — a crystal card, pressed herb, wax seal, sticker — something lovely to make you smile.', accent:'#4A2D40', bg:'#8BA888' },
 ]
 
@@ -15,7 +15,7 @@ export function WhatsInside() {
         <div className="text-center mb-16">
           <p className="font-josefin text-xs tracking-[0.3em] uppercase text-[#C4899A] mb-4">Every Month</p>
           <h2 className="font-cormorant text-4xl md:text-5xl italic font-light text-[#F9F3EC]">
-            What's inside your envelope
+            What&apos;s inside your envelope
           </h2>
           <div className="flex items-center justify-center gap-4 mt-6">
             <div className="h-px w-12 bg-[#C4899A]/30"/>
