@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 
 export function About() {
   return (
@@ -11,24 +12,28 @@ export function About() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
+
+          {/* Photo */}
           <div className="relative flex justify-center">
-            <div className="absolute top-5 left-5 w-64 h-80 border border-[#C4899A]/25"/>
-            <div className="relative w-64 h-80 bg-[#4A2D40] flex flex-col items-center justify-center gap-3">
-              <svg width="44" height="44" viewBox="0 0 48 48" fill="none">
-                <circle cx="24" cy="24" r="22" stroke="#C4899A" strokeWidth="0.8"/>
-                <path d="M24 5 L25.4 22 L24 24 L22.6 22 Z" fill="#C47856"/>
-                <path d="M24 43 L25.4 26 L24 24 L22.6 26 Z" fill="#C4899A"/>
-                <path d="M5 24 L22 22.6 L24 24 L22 25.4 Z" fill="#C4899A"/>
-                <path d="M43 24 L26 22.6 L24 24 L26 25.4 Z" fill="#C4899A"/>
-                <circle cx="24" cy="24" r="3" fill="#C4899A"/>
-              </svg>
-              <span className="font-josefin text-xs tracking-widest uppercase text-[#C4899A]/50">Your photo here</span>
+            {/* Offset decorative border */}
+            <div className="absolute top-5 left-5 w-72 h-96 border border-[#C4899A]/25"/>
+            {/* Photo */}
+            <div className="relative w-72 h-96 overflow-hidden">
+              <Image
+                src="/cynthia.jpg"
+                alt="Cynthia — Inner Compass Tarot Letters"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 288px"
+              />
             </div>
+            {/* Name tag */}
             <div className="absolute -bottom-4 right-6 bg-[#8BA888] px-4 py-2">
               <span className="font-josefin text-xs tracking-widest uppercase text-[#F9F3EC]">Cynthia</span>
             </div>
           </div>
 
+          {/* Text */}
           <div>
             <h2 className="font-cormorant text-4xl md:text-5xl italic font-light text-[#4A2D40] leading-tight mb-6">
               A letter written<br/>just for you.
