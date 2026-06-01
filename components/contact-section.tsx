@@ -3,7 +3,31 @@ import { useState } from 'react'
 
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
   const [form, setForm] = useState({ name:'', email:'', message:'' })
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    setLoading(true)
+    setError('')
+    try {
+      const res = await fetch('https://formspree.io/f/meedbpoj', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setError('Something went wrong. Please email me directly at cynthia@innercompasstarotletters.org')
+      }
+    } catch {
+      setError('Something went wrong. Please email me directly at cynthia@innercompasstarotletters.org')
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
     <section id="contact" className="py-24 bg-[#F9F3EC]">
@@ -30,7 +54,7 @@ export function ContactSection() {
             <p className="font-josefin text-sm font-light text-[#6B4C3B]">I will be in touch soon.</p>
           </div>
         ) : (
-          <form onSubmit={e => { e.preventDefault(); setSubmitted(true) }} className="border border-[#C4899A]/20">
+          <form onSubmit={handleSubmit} className="border border-[#C4899A]/20">
             <div className="grid md:grid-cols-2">
               <div className="p-6 border-b border-r border-[#C4899A]/20">
                 <label className="font-josefin text-xs tracking-widest uppercase text-[#C4899A] block mb-3">Name</label>
@@ -48,8 +72,11 @@ export function ContactSection() {
               <textarea required rows={5} placeholder="What's on your mind?" value={form.message} onChange={e => setForm({...form, message:e.target.value})}
                 className="w-full bg-transparent font-josefin text-sm font-light text-[#4A2D40] placeholder-[#6B4C3B]/35 outline-none resize-none"/>
             </div>
-            <button type="submit" className="w-full font-josefin text-xs tracking-widest uppercase py-5 bg-[#4A2D40] text-[#F9F3EC] hover:bg-[#6B4C3B] transition-colors">
-              Send Message
+            {error && (
+              <p className="font-josefin text-xs text-[#C47856] text-center px-6 pt-4">{error}</p>
+            )}
+            <button type="submit" disabled={loading} className="w-full font-josefin text-xs tracking-widest uppercase py-5 bg-[#4A2D40] text-[#F9F3EC] hover:bg-[#6B4C3B] transition-colors disabled:opacity-60">
+              {loading ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         )}
