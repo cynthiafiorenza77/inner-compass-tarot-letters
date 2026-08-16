@@ -52,13 +52,13 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
-        <p className="font-josefin text-xs tracking-[0.35em] uppercase text-[#C4899A] mb-6">Monthly · Thoughtfully Written · Mailed to You</p>
+        <p className="font-josefin text-xs tracking-[0.35em] uppercase text-[#C4899A] mb-6">More Than a Tarot Reading</p>
 
         <h1 className="font-cormorant text-6xl md:text-8xl font-light italic text-[#F9F3EC] leading-none mb-3">
-          Inner Compass
+          Your Year Ahead
         </h1>
-        <h2 className="font-josefin text-sm tracking-[0.45em] uppercase text-[#C4899A] mb-10 font-light">
-          Tarot Letters
+        <h2 className="font-josefin text-sm tracking-[0.3em] uppercase text-[#C4899A] mb-10 font-light">
+          Your Personalized 12-Month Tarot Reading
         </h2>
 
         <div className="flex items-center justify-center gap-5 mb-8">
@@ -72,16 +72,17 @@ export function Hero() {
           <div className="h-px w-20 bg-[#C4899A]/30"/>
         </div>
 
-        <p className="font-cormorant text-xl md:text-2xl italic text-[#F9F3EC]/75 mb-12 leading-relaxed">
-          A gentle monthly tarot check-in for your next chapter.
+        <p className="font-cormorant text-xl md:text-2xl italic text-[#F9F3EC]/75 mb-4 leading-relaxed max-w-xl mx-auto">
+          A deeply personal look at the energies, themes, opportunities and challenges surrounding your next 12 months — combining Tarot with my intuitive and mediumistic impressions.
+        </p>
+
+        <p className="font-josefin text-sm tracking-widest uppercase text-[#C47856] mb-12">
+          Founding Client Price: $197
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#pricing" className="font-josefin text-xs tracking-widest uppercase px-10 py-4 bg-[#C47856] text-[#F9F3EC] hover:bg-[#C4899A] transition-colors duration-300">
-            Join the Letter Club
-          </a>
-          <a href="#inside" className="font-josefin text-xs tracking-widest uppercase px-10 py-4 border border-[#C4899A]/40 text-[#C4899A] hover:border-[#C4899A] hover:text-[#F9F3EC] transition-colors duration-300">
-            See What's Inside
+          <a href="#offer" className="font-josefin text-xs tracking-widest uppercase px-10 py-4 bg-[#C47856] text-[#F9F3EC] hover:bg-[#C4899A] transition-colors duration-300">
+            Get My Year Ahead Reading
           </a>
         </div>
 

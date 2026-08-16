@@ -1,7 +1,8 @@
 import { Navbar } from '@/components/navbar'
 import { Hero } from '@/components/hero'
-import { About } from '@/components/about'
 import { WhatsInside } from '@/components/whats-inside'
+import { About } from '@/components/about'
+import { IntuitiveProcess } from '@/components/intuitive-process'
 import { Pricing } from '@/components/pricing'
 import { FAQ } from '@/components/faq'
 import { ContactSection } from '@/components/contact-section'
@@ -12,8 +13,9 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <About />
       <WhatsInside />
+      <About />
+      <IntuitiveProcess />
       <Pricing />
       <FAQ />
       <ContactSection />

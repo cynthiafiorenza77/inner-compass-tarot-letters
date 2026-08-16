@@ -5,28 +5,28 @@ import { ChevronDown } from 'lucide-react'
 
 const faqs = [
   {
-    q: "When will my letter arrive?",
-    a: "I mail Inner Compass letters on the 15th of every month. US subscribers typically receive theirs within 3–10 days. International subscribers should allow 2–6 weeks for delivery. Subscribe before the 15th and your letter ships that same month — sign up after the 15th and your first letter goes out the following month."
+    q: "Is this a live reading?",
+    a: "No. Your reading is recorded privately for you, allowing me to take my time with your cards and intuitive impressions. You'll receive the private recording electronically and can watch it whenever you'd like."
   },
   {
-    q: "How do I cancel or update my address?",
-    a: "Just email me at cynthia@innercompasstarotletters.org and I will take care of everything. Whether you need to cancel, update your shipping address, or change your billing info — please reach out before the 15th of the month so I can make adjustments before that month's letters go out."
+    q: "Do I need to tell you what's happening in my life?",
+    a: "No. You may provide context if you'd like, or ask me to go into your reading cold."
   },
   {
-    q: "What if my letter does not arrive?",
-    a: "US mail can occasionally take up to two weeks, and international deliveries can take up to six. If your letter has not arrived by the end of the month (US) or six weeks (international), email me at cynthia@innercompasstarotletters.org and I will make it right — either with a replacement or a refund. Before reaching out, please double-check that the address on your receipt is correct, as that is often the culprit!"
+    q: "Do I have to upload a photograph?",
+    a: "No. A photograph is completely optional."
   },
   {
-    q: "Can I gift a subscription?",
-    a: "Yes, and it makes such a meaningful gift! Simply choose any subscription length, enter your recipient's name and mailing address at checkout, and I will handle the rest. Each month they will receive a beautiful envelope full of tarot goodness — no wrapping required."
+    q: "When will I receive my reading?",
+    a: "Within 5 business days after your payment and intake information have been received."
   },
   {
-    q: "What is tarot — do I need to believe in it?",
-    a: "Tarot is a tool for reflection, not fortune-telling. You do not need to hold any particular belief — just bring an open mind. Many subscribers use their monthly letter as a journaling prompt, a moment of intentional pause, or simply a beautiful piece of mail to look forward to. The cards meet you wherever you are."
+    q: "Can I ask a follow-up question?",
+    a: "Your reading includes one clarification question about something already covered in your reading. A new question or topic would require a separate reading."
   },
   {
-    q: "Do you offer readings for specific questions?",
-    a: "The monthly letter is a general reading for the collective energy of that month — it is not personalized to a specific situation or question. If you are looking for a one-on-one reading, feel free to reach out at cynthia@innercompasstarotletters.org and we can chat about what that might look like."
+    q: "Does a Tarot reading guarantee what will happen?",
+    a: "No. Tarot and intuitive readings are intended for personal insight, reflection and entertainment. They do not guarantee future events and should not replace professional medical, legal, financial or mental-health advice."
   },
 ]
 

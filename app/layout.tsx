@@ -16,8 +16,8 @@ const josefin = Josefin_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Inner Compass Tarot Letters',
-  description: 'A gentle monthly tarot check-in for your next chapter.',
+  title: 'Inner Compass Tarot — Your Year Ahead Reading',
+  description: 'A personalized 12-month Tarot and intuitive reading with Cynthia.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
