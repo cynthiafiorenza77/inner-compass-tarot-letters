@@ -5,6 +5,7 @@ const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xbgrzjve'
 
 export default function IntakePage() {
   const [submitted, setSubmitted] = useState(false)
+  const [photoSkipped, setPhotoSkipped] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
@@ -16,6 +17,34 @@ export default function IntakePage() {
   const [anythingElse, setAnythingElse] = useState('')
   const [photo, setPhoto] = useState<File | null>(null)
 
+  function buildFormData(includePhoto: boolean) {
+    const formData = new FormData()
+    formData.append('form_type', 'Year Ahead Intake')
+    formData.append('name', name)
+    formData.append('email', email)
+    formData.append('birthday', birthday || 'Not provided')
+    formData.append('approach', approach === 'cold' ? 'Go in cold' : 'Provide context')
+    if (approach === 'context') {
+      formData.append('context', context || 'No details provided')
+    }
+    formData.append('anything_else', anythingElse || 'None')
+    if (includePhoto && photo) {
+      formData.append('photo', photo)
+    }
+    if (photo && !includePhoto) {
+      formData.append('photo_note', `Customer attempted to upload a photo (${photo.name}) but it could not be attached. Please follow up by email if needed.`)
+    }
+    return formData
+  }
+
+  async function submitForm(includePhoto: boolean) {
+    return fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: buildFormData(includePhoto),
+    })
+  }
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     if (!approach) {
@@ -26,25 +55,18 @@ export default function IntakePage() {
     setError('')
 
     try {
-      const formData = new FormData()
-      formData.append('form_type', 'Year Ahead Intake')
-      formData.append('name', name)
-      formData.append('email', email)
-      formData.append('birthday', birthday || 'Not provided')
-      formData.append('approach', approach === 'cold' ? 'Go in cold' : 'Provide context')
-      if (approach === 'context') {
-        formData.append('context', context || 'No details provided')
-      }
-      formData.append('anything_else', anythingElse || 'None')
-      if (photo) {
-        formData.append('photo', photo)
-      }
+      // First attempt: include the photo if one was selected.
+      let res = await submitForm(true)
 
-      const res = await fetch(FORMSPREE_ENDPOINT, {
-        method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: formData,
-      })
+      // If it failed and a photo was attached, retry without the photo —
+      // this handles the free-tier Formspree attachment limitation gracefully
+      // so a customer's submission never gets lost over an optional photo.
+      if (!res.ok && photo) {
+        res = await submitForm(false)
+        if (res.ok) {
+          setPhotoSkipped(true)
+        }
+      }
 
       if (res.ok) {
         setSubmitted(true)
@@ -79,6 +101,11 @@ export default function IntakePage() {
           <p className="font-josefin text-sm leading-loose text-[#6B4C3B] font-light mb-4">
             I&apos;ve received your information and will begin preparing your reading. Your private video reading and Year Ahead Guide will be delivered to your email within 5 business days.
           </p>
+          {photoSkipped && (
+            <p className="font-josefin text-sm leading-loose text-[#C47856] font-light mb-4">
+              Your photo couldn&apos;t be attached automatically — if you&apos;d still like to share it, please email it directly to cynthia@innercompasstarotletters.org.
+            </p>
+          )}
           <p className="font-josefin text-sm leading-loose text-[#6B4C3B] font-light mb-8">
             There is nothing else you need to do right now.
           </p>
@@ -163,7 +190,7 @@ export default function IntakePage() {
           <div className="p-6 border-b border-[#C4899A]/20">
             <label className="font-josefin text-xs tracking-widest uppercase text-[#C4899A] block mb-2">Optional Photo</label>
             <p className="font-josefin text-xs font-light text-[#6B4C3B]/60 mb-3">
-              You may upload one recent photo of yourself — JPG, PNG, or HEIC. Completely optional.
+              You may upload one recent photo of yourself — JPG, PNG, or HEIC. Completely optional. If it can&apos;t be attached automatically, we&apos;ll let you know how to send it separately.
             </p>
             <input
               type="file"
