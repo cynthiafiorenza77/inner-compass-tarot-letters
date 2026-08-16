@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/meedbpoj' // TODO: consider a dedicated Formspree form for intake vs. contact
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xbgrzjve'
 
 export default function IntakePage() {
   const [submitted, setSubmitted] = useState(false)

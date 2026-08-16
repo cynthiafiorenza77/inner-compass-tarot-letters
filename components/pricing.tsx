@@ -1,7 +1,7 @@
 'use client'
 
 // TODO: Replace with the live Stripe Payment Link for "Your Year Ahead — $197 one-time"
-const YEAR_AHEAD_CHECKOUT_URL = '#'
+const YEAR_AHEAD_CHECKOUT_URL = 'https://buy.stripe.com/9B65kwaJ3aWZ1JS5rZdEs08'
 
 export function Pricing() {
   return (
